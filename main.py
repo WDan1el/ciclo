@@ -1,10 +1,9 @@
 import math
 
-# Inicializar variables
-e_approx = 0  # Estimación de e
-n = 10  # Comenzamos con 10!
-diferencia = 1  # Inicializar diferencia alta para entrar al bucle
-umbral = 0.0001  # Diferencia mínima entre sumandos consecutivos
+e_approx = 0 
+n = 10  #!
+diferencia = 1  #
+umbral = 0.0001  
 
 while diferencia >= umbral:
    
