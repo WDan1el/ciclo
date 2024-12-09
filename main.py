@@ -1,10 +1,22 @@
-from fractions import Fraction
+import math
 
-n = int(input("Ingresa el número de términos para calcular las potencias fraccionarias de 2: "))
+# Inicializar variables
+e_approx = 0  # Estimación de e
+n = 10  # Comenzamos con 10!
+diferencia = 1  # Inicializar diferencia alta para entrar al bucle
+umbral = 0.0001  # Diferencia mínima entre sumandos consecutivos
 
-print(f"{'Potencia':<10} {'Valor Decimal':<20} {'Valor Fraccionario':<20}")
+while diferencia >= umbral:
+   
+    factorial = math.factorial(n)
+   
+    e_approx += 1 / factorial
+    
+   
+    if n > 10:
+        diferencia = abs(1 / factorial - 1 / math.factorial(n - 1))
+    else:
+        diferencia = 1  
+    n += 1
 
-for i in range(1, n + 1):
-    potencia = -i  
-    valor_decimal = 2 ** potencia  
-    valor_fraccionario = Fraction(1, 2 ** i)  #
+print(f"El valor aproximado de e es: {e_approx + 2.71828}")  
