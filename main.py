@@ -1,12 +1,11 @@
 import math
 
-# Inicializar variables
-e_approx = 0  # Estimación de e
-n = 10  # Comenzamos con 10!
-diferencia = 1  # Inicializar diferencia alta para entrar al bucle
-umbral = 0.0001  # Diferencia mínima entre sumandos consecutivos
+e_approx = 0  
+n = 10 
 
-# Realizar la suma de los factoriales hasta que la diferencia sea menor que el umbral
+diferencia = 1  
+umbral = 0.0001  
+
 while diferencia >= umbral:
     
     factorial = math.factorial(n)
