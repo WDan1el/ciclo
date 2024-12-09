@@ -1,5 +1,9 @@
-n = int(input("Ingresa un número para generar las potencias de 2 hasta la n-ésima: "))
+num1 = int(input("Ingresa el primer número entero: "))
+num2 = int(input("Ingresa el segundo número entero: "))
 
-print(f"Potencias de 2 desde la 0-ésima hasta la {n}-ésima:")
-for i in range(n + 1):
-    print(f"2^{i} = {2 ** i}")
+if num1 > num2:
+    num1, num2 = num2, num1  
+
+suma = sum(range(num1 + 1, num2))
+
+print(f"La suma de los números entre {num1} y {num2} es: {suma}")
