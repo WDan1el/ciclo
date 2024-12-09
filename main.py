@@ -1,9 +1,18 @@
-num1 = int(input("Ingresa el primer número entero: "))
-num2 = int(input("Ingresa el segundo número entero: "))
+# Generar y mostrar la tabla de multiplicar del 1 al 10
+print("Tabla de multiplicar (números alineados a la derecha):")
+print()
 
-if num1 > num2:
-    num1, num2 = num2, num1  
+# Encabezado de la tabla
+print("   ", end="")
+for i in range(1, 11):
+    print(f"{i:>4}", end="")
+print()
 
-suma = sum(range(num1 + 1, num2))
+print("-" * 45)
 
-print(f"La suma de los números entre {num1} y {num2} es: {suma}")
+# Generar filas de la tabla
+for i in range(1, 11):
+    print(f"{i:>2} |", end="")  # Número de la fila con formato alineado
+    for j in range(1, 11):
+        print(f"{i * j:>4}", end="")  # Producto alineado a la derecha
+    print()
